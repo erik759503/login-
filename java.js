@@ -3,12 +3,24 @@ const containercarrossel = container.querySelector(".container-carrossel");
 const carrossel = container.querySelector(".carrossel");
 const carrosselItems = carrossel.querySelectorAll(".carrossel-item");
 
-// Iniciamos variables que cambiaran su estado.
+// Iniciamos variables que indicam o estado do mouse.
 let isMouseDown = false;
 let currentMousePos = 0;
 let lastMousePos = 0;
 let lastMoveTo = 0;
 let moveTo = 0;
+
+
+// Exemplo de como manipular os itens do carrossel altomatico
+let rotationIndex = 0;
+
+const showNextItem = () => {
+  rotationIndex++;
+  const rotation = -rotationIndex * (360 / carrosselItems.length);
+  carrossel.style.transform = `rotateY(${rotation}deg)`;
+};
+setInterval(showNextItem, 2000);
+
 
 const createcarrossel = () => {
   const carrosselProps = onResize();
