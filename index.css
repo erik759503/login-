@@ -185,6 +185,11 @@ body {
     transform: rotatey(var(--rotatey)) translatez(var(--tz));
     background: linear-gradient(-229deg, #cf91ff, #5782f5);
 }
+.carrossel-item:nth-child(7) {
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background: linear-gradient(-229deg, #cf91ff, #5782f5);
+}
 
 @media screen and (min-width: 576px) {
     .container-carrossel {
